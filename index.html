@@ -9,6 +9,8 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Email sending-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -194,7 +196,7 @@
                                                 placeholder="Enter email address..." aria-label="Enter email address..."
                                                 data-sb-validations="required,email"/></div>
                         <div class="col-auto">
-                            <button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button>
+                            <button class="btn btn-primary disabled" id="submitButton" type="submit" onclick="sendEmail()">Notify Me!</button>
                         </div>
                     </div>
                     <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.
@@ -206,10 +208,10 @@
                     <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center mb-3 mt-2 text-white">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br/>
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <div class="fw-bolder">Subscription successful!</div>
+<!--                            To activate this form, sign up at-->
+<!--                            <br/>-->
+<!--                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
                         </div>
                     </div>
                     <!-- Submit error message-->

@@ -52,3 +52,21 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+function sendEmail() {
+    let emailVal = document.getElementById("emailAddress").value;
+    alert("Sending email to: " + emailVal);
+    Email.send({
+        Host: "smtp.gmail.com",
+        // Username: "sender@email_address.com",
+        // Password: "Enter your password",
+        To: 'bruynhuis@gmail.com',
+        From: emailVal,
+        Subject: "Subscribed to website",
+        Body: "A new user has subscribed to your website, " + emailVal,
+    })
+        .then(function (message) {
+            alert("mail sent successfully")
+        });
+}
